@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InsectBody : MonoBehaviour
+public class InsectBody : AbstractBody
 {
-    // Start is called before the first frame update
-    void Start()
+    public int Health { get; set; }
+    public string Live { get; set; }
+    public string Name { get; set; }
+    public (int, int) XY { get; set; }
+    public InsectBody(int helth, string live, string name, int x, int y) : base(name)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Health = helth;
+        Live = live;
+        Name = name;
+        XY = (x,y);
     }
 }
