@@ -9,6 +9,7 @@ using UnityEngine;
 public class ArrayInsect : IInsect_Helth
 {
     private readonly List<AbstractBody> body;
+
     public List<AbstractBody> ListInsectGet() => body;
     
     public int SizeArray() => body.Count;
@@ -19,16 +20,16 @@ public class ArrayInsect : IInsect_Helth
 
     public void MinusHealth2Leg()
     {
-        foreach (AbstractBody bodyPart in body)
-        {
+        foreach (AbstractBody bodyPart in body)        
             if (bodyPart is InsectBody insec && insec.Live == "yes")
             {
                 insec.Health -= 2;
                 if (insec.Health <= 0)
                     body.Remove(insec);
-            }
-        }
+            }        
     }
+
+
     /*public void PlusHaelth2Leg()
     {
         foreach (AbstractBody bodies in body)

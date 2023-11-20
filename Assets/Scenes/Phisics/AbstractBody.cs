@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class AbstractBody
 {
-    public string Name { get; set; }
-    public AbstractBody(string name) => Name = name;
+    public string Live { get; set; }
+    public AbstractBody(string live) => Live = live;
     
 }

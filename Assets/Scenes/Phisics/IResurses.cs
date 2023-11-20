@@ -5,10 +5,10 @@ using UnityEngine;
 
 public interface IResurses
 {
-    void WaterDel();
-    void FoodDel();
-    void WaterDelWithoutFood();
-    void FoodDelWithoutWater();
+    void WaterDel(int size);
+    void FoodDel(int size);
+    void WaterDelWithoutFood(int size);
+    void FoodDelWithoutWater(int size);
     int FoodGet();
     int WaterGet();
 }

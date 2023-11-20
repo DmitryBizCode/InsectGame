@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IAddRes
 {
-    void WaterAdd();
-    void FoodAdd();
+    void WaterAdd(InsectBody a);
+    void FoodAdd(InsectBody a);
 }

@@ -302,7 +302,7 @@ Transform:
   m_GameObject: {fileID: 151055130}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6, y: -1, z: 0}
+  m_LocalPosition: {x: -6.14, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36252,6 +36252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2022732077}
   - component: {fileID: 2022732076}
+  - component: {fileID: 2022732078}
   m_Layer: 0
   m_Name: Jelly 7
   m_TagString: Untagged
@@ -36299,7 +36300,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: 6de610ccbbc0a094b804153e2dea43a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -36320,12 +36321,25 @@ Transform:
   m_GameObject: {fileID: 2022732075}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.9, y: 25.8, z: 0}
+  m_LocalPosition: {x: -12.07, y: -0.22, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2022732078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022732075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 574fc6a64a6489a41a753f1933dac4cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 6
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -36333,6 +36347,7 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1872928863}
   - {fileID: 75670475}
+  - {fileID: 2022732077}
   - {fileID: 1456145713}
   - {fileID: 1184888865}
   - {fileID: 1436855053}
@@ -36349,4 +36364,3 @@ SceneRoots:
   - {fileID: 1056830086}
   - {fileID: 1859041274}
   - {fileID: 1880002267}
-  - {fileID: 2022732077}

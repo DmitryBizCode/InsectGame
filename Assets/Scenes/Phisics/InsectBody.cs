@@ -6,13 +6,11 @@ public class InsectBody : AbstractBody
 {
     public int Health { get; set; }
     public string Live { get; set; }
-    public string Name { get; set; }
     public (int, int) XY { get; set; }
-    public InsectBody(int helth, string live, string name, int x, int y) : base(name)
+    public InsectBody(int helth, string live, int x, int y) : base(live)
     {
         Health = helth;
         Live = live;
-        Name = name;
         XY = (x,y);
     }
 }

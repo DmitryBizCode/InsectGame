@@ -35,7 +35,7 @@ public class ChangePosition
                 {
                     if (insec.XY == (x, y))
                     {
-                        resurs.WaterAdd();
+                        resurs.WaterAdd(insec);
                         insec.XY = (0, 0);
                     }
                 }
