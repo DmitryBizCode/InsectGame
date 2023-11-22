@@ -10,12 +10,23 @@ public class Insect : MonoBehaviour
 {
 
     [SerializeField] private int Health;
-    private ArrayInsect arrayInsect = new ArrayInsect();
+    [SerializeField] private GameObject InsectGraphics;
+
+
+
+    private ArrayInsect arrayInsect;
+    private Resurses resurs;
+    private ChangePosition posit;
+    public InsectBody ins;
     private float timer = 0f;
     private float delay = 1f;
     void Start()
     {
-        arrayInsect.AddBody(new InsectBody(Health, "yes", 0, 0));
+        resurs = new Resurses();
+        arrayInsect = new ArrayInsect();
+        posit = new ChangePosition(resurs, arrayInsect);
+        ins = new InsectBody(Health, "yes", 0, 0);
+        arrayInsect.AddBody(ins);
         transform.position = Vector3.zero;
     }
 
@@ -26,7 +37,9 @@ public class Insect : MonoBehaviour
 
         if (timer >= delay)
         {
-            transform.position = new Vector3(10, 18, 0);
+            posit.ChangePos();            
+            
+            transform.position = new Vector3(ins.XY.Item1, ins.XY.Item2, 0);
             timer = 0f; // скидаємо таймер для нової затримки
         }
     }
