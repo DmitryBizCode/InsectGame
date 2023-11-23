@@ -4,22 +4,17 @@ using UnityEngine;
 
 public class ChangePosition
 {
-    private readonly Resurses resurs;
-    private readonly ArrayInsect a;
+    private InsectBody insec;
 
-    public ChangePosition(Resurses resurs, ArrayInsect a)
-    {
-        this.resurs = resurs;
-        this.a = a;
-    }
-    public (int,int) ChangePositions()
+    public ChangePosition(InsectBody a) => this.insec = a;
+       
+    public void ChangePositions()
     {
         var rand = new System.Random();
         var water = new Water();
-        foreach (AbstractBody bodyPart in a.ListInsectGet())
-        {
-            if (bodyPart is InsectBody insec && insec.Live == "yes")
-            {
+        
+            if (insec != null && insec.Live == "yes")
+            {                
                 int randomNumber = rand.Next(1, 5);
                 if (randomNumber == 1)
                     insec.XY = (insec.XY.Item1, insec.XY.Item2 + 1);
@@ -29,40 +24,17 @@ public class ChangePosition
                     insec.XY = (insec.XY.Item1, insec.XY.Item2 - 1);
                 else if (randomNumber == 4)
                     insec.XY = (insec.XY.Item1 - 1, insec.XY.Item2);
-                return (insec.XY.Item1, insec.XY.Item2);
-            } 
-        }
-        return(0,0);
-    }
-    public void ChangePos()
-    {
-        var rand = new System.Random();
-        var water = new Water();
-        foreach (AbstractBody bodyPart in a.ListInsectGet())
-        {
-            if (bodyPart is InsectBody insec && insec.Live == "yes")
-            {
-                //1,5
-                int randomNumber = rand.Next(1, 2);
-                if (randomNumber == 1)
-                    insec.XY = (insec.XY.Item1, insec.XY.Item2 + 1);
-                else if (randomNumber == 2)
-                    insec.XY = (insec.XY.Item1 + 1, insec.XY.Item2);
-                else if (randomNumber == 3)
-                    insec.XY = (insec.XY.Item1, insec.XY.Item2 - 1);
-                else if (randomNumber == 4)
-                    insec.XY = (insec.XY.Item1 - 1, insec.XY.Item2);
 
-                foreach ((int x, int y) in water.waterList)
-                {
-                    if (insec.XY == (x, y))
-                    {
-                        resurs.WaterAdd(insec);
-                        insec.XY = (0, 0);
-                    }
-                }
+                //foreach ((int x, int y) in water.waterList)
+                //{
+                    //if (insec.XY == (x, y))
+                    //{
+                        //resurs.WaterAdd(insec);
+                        //insec.XY = (0, 0);
+                    //}
+                //}
                 //addfood
             }
         }
-    }
 }
+

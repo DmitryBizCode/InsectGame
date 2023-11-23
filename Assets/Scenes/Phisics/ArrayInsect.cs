@@ -6,7 +6,7 @@ using System.Drawing;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class ArrayInsect : IInsect_Helth
+public class ArrayInsect  //: IInsect_Helth
 {
     private readonly List<AbstractBody> body;
 
@@ -18,7 +18,7 @@ public class ArrayInsect : IInsect_Helth
     
     public void AddBody(AbstractBody shape) => body!.Add(shape);
 
-    public void MinusHealth2Leg()
+    /*public void MinusHealth2Leg()
     {
         foreach (AbstractBody bodyPart in body)        
             if (bodyPart is InsectBody insec && insec.Live == "yes")
@@ -27,7 +27,7 @@ public class ArrayInsect : IInsect_Helth
                 if (insec.Health <= 0)
                     body.Remove(insec);
             }        
-    }
+    }*/
     /*public (int, int, int) Position()
     {
         foreach (AbstractBody bodyPart in body)

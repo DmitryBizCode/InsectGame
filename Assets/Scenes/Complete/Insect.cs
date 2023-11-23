@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEditor;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.XR;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class Insect : MonoBehaviour
 {
@@ -14,19 +16,14 @@ public class Insect : MonoBehaviour
 
 
 
-    private ArrayInsect arrayInsect;
-    private Resurses resurs;
     private ChangePosition posit;
     public InsectBody ins;
     private float timer = 0f;
     private float delay = 1f;
     void Start()
     {
-        resurs = new Resurses();
-        arrayInsect = new ArrayInsect();
-        posit = new ChangePosition(resurs, arrayInsect);
         ins = new InsectBody(Health, "yes", 0, 0);
-        arrayInsect.AddBody(ins);
+        posit = new ChangePosition(ins);
         transform.position = Vector3.zero;
     }
 
@@ -37,9 +34,9 @@ public class Insect : MonoBehaviour
 
         if (timer >= delay)
         {
-            posit.ChangePos();            
-            
-            transform.position = new Vector3(ins.XY.Item1, ins.XY.Item2, 0);
+            posit.ChangePositions();
+            transform.position = new Vector3(ins.XY.Item1, ins.XY.Item2,0);
+            //transform.position = new Vector3(ins.XY.Item1, ins.XY.Item2, 0);
             timer = 0f; // скидаємо таймер для нової затримки
         }
     }

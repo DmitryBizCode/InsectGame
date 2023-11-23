@@ -25,17 +25,19 @@ public class InsectEnemy : MonoBehaviour
         timer += Time.deltaTime; // додаємо час, що пройшов з останнього кадру
 
         if (timer >= delay)
-        {
-            foreach (GameObject enemy in lis)
-            {
-                // Робимо щось з кожним об'єктом
-                var pos = enemy.transform.position;
-                if (pos == new Vector3(0f,10f,0f))
+        {   
+            if (lis.Count > 0) {
+                foreach (GameObject enemy in lis)
                 {
-                    Destroy(enemy);
-                    lis.Remove(enemy);
+                    // Робимо щось з кожним об'єктом
+                    var pos = enemy.transform.position;
+                    if (pos == new Vector3(0f, 100f, 0f))
+                    {
+                        Destroy(enemy);
+                        lis.Remove(enemy);
+                    }
                 }
-            }
+            }            
             //posit.ChangePos();
             if (5 > n) 
                 lis.Add(Instantiate(enemy_Insect,transform.position,Quaternion.identity));
