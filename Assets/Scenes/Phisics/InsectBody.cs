@@ -13,5 +13,9 @@ public class InsectBody : IInsect_Helth
         Live = live;
         XY = (x,y);
     }
-    public void MinusHealth2Leg() => Health = (Health > 2) ? Health - 2 : Health;
+    public void MinusHealth2Leg()
+    {
+        Health -= 2;
+        Live = (Health > 0) ? Live : "no";        
+    }
 }

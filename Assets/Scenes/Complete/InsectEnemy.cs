@@ -5,14 +5,15 @@ using UnityEngine;
 public class InsectEnemy : MonoBehaviour
 {
     [SerializeField] private GameObject enemy_Insect;
+    [SerializeField] private GameObject Egg;
+
     [SerializeField] private float start_spawn_count;
     [SerializeField] private float maximum_spawn_ins;
 
 
-    private ArrayInsect arrayInsect;
-    private List<GameObject> lis = new List<GameObject>();
+    readonly List<GameObject> lis = new ();
     private float timer = 0f;
-    private float delay = 1f;
+    readonly float delay = 1f;
     int n = 4;
     // Start is called before the first frame update
     void Start()

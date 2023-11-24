@@ -8,7 +8,7 @@ using System.IO;
 
 public class MaterialDel : MaterialData
 {
-    private string filePath = "InsectGame/Assets/Scenes/DataBase/DataBaseMFW.json";
+    readonly string filePath = "InsectGame/Assets/Scenes/DataBase/DataBaseMFW.json";
 
     // Метод для завантаження даних з файлу JSON
     private MaterialData LoadMaterialData()

@@ -11,18 +11,18 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 public class Insect : MonoBehaviour
 {
 
-    [SerializeField] private int Health;
     [SerializeField] private GameObject InsectGraphics;
-
-
 
     private ChangePosition posit;
     public InsectBody ins;
-    private float timer = 0f;
-    private float delay = 1f;
+
+    private float timer = 0f; //timer
+    readonly float delay = 1f; //limit timer
+
+
     void Start()
     {
-        ins = new InsectBody(Health, "yes", 0, 0);
+        ins = new InsectBody(6, "yes", 0, 0);
         posit = new ChangePosition(ins);
         transform.position = Vector3.zero;
     }
@@ -30,11 +30,12 @@ public class Insect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime; // додаємо час, що пройшов з останнього кадру
-
+        timer += Time.deltaTime; // додаємо час, що пройшов з останнього кадру        
         if (timer >= delay)
         {
             posit.ChangePositions();
+            transform.position = new Vector3(ins.XY.Item1, ins.XY.Item2, 0);
+
             transform.position = new Vector3(ins.XY.Item1, ins.XY.Item2,0);
             //transform.position = new Vector3(ins.XY.Item1, ins.XY.Item2, 0);
             timer = 0f; // скидаємо таймер для нової затримки

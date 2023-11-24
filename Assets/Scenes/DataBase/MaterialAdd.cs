@@ -5,7 +5,7 @@ using System.IO;
 
 public class MaterialAdd : MaterialData
 {
-    private string filePath = "InsectGame/Assets/Scenes/DataBase/DataBaseMFW.json";
+    readonly string filePath = "InsectGame/Assets/Scenes/DataBase/DataBaseMFW.json";
 
     // Метод для завантаження даних з файлу JSON
     private MaterialData LoadMaterialData()
@@ -37,7 +37,7 @@ public class MaterialAdd : MaterialData
         SaveMaterialData(materialData); // Збереження змін у файл JSON
     }
 
-    // Метод для додавання кількості Food до файлу JSON
+    // Метод для додавання кількості Water до файлу JSON
     public void AddWater(int amount)
     {
         MaterialData materialData = LoadMaterialData(); // Завантаження даних з файлу JSON
@@ -45,7 +45,7 @@ public class MaterialAdd : MaterialData
 
         SaveMaterialData(materialData); // Збереження змін у файл JSON
     }
-    // Метод для додавання кількості Food до файлу JSON
+    // Метод для додавання кількості Material до файлу JSON
     public void AddMaterialBuilding(int amount)
     {
         MaterialData materialData = LoadMaterialData(); // Завантаження даних з файлу JSON
@@ -56,25 +56,3 @@ public class MaterialAdd : MaterialData
 
 
 }
-
-
-
-
-/*public class Material 
-{
-    private int Material_ {  get; set; }
-    public Material() => Material_ = 50;
-    public int GetMaterialCollect() => Material_;
-    public void AddMaterial(InsectBody a)
-    {
-        Material_ += a.Health switch
-        {
-            6 => 5,
-            4 => 2,
-            _ => 1
-        };
-    }
-    public void RemoveMaterialHouse() => Material_ -= 50;
-
-}
-*/

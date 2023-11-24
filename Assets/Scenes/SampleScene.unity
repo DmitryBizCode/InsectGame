@@ -35828,6 +35828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy_Insect: {fileID: 6188551624344393034, guid: c43a83f48f28b6c48b5f393948122c55,
     type: 3}
+  Egg: {fileID: 4453407236010859957, guid: 5819fc778b616fe428d9238b805c8dcd, type: 3}
   start_spawn_count: 0
   maximum_spawn_ins: 0
 --- !u!1 &1321591054
