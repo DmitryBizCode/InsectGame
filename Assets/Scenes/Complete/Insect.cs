@@ -35,9 +35,6 @@ public class Insect : MonoBehaviour
         {
             posit.ChangePositions();
             transform.position = new Vector3(ins.XY.Item1, ins.XY.Item2, 0);
-
-            transform.position = new Vector3(ins.XY.Item1, ins.XY.Item2,0);
-            //transform.position = new Vector3(ins.XY.Item1, ins.XY.Item2, 0);
             timer = 0f; // скидаємо таймер для нової затримки
         }
     }

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<MaterialData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="elp">
+  <MaterialBuilding>0</MaterialBuilding>
+  <Food>1000</Food>
+  <Water>1000</Water>
+</MaterialData>
