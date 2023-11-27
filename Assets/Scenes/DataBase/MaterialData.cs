@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using UnityEngine;
 
-[System.Xml.Serialization.XmlInclude(typeof(elp))]
+[System.Xml.Serialization.XmlInclude(typeof(Helper))]
 public class MaterialData
 {
     public int MaterialBuilding { get; set; }

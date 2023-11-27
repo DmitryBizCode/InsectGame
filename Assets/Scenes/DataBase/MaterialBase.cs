@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MaterialBase : MonoBehaviour
-{
-    readonly MaterialAdd add;
-    readonly MaterialDel del;
-
+public class MaterialBase
+{ 
     public void MaterialAdd(InsectBody a)
     {        
         int material = a.Health switch
@@ -14,8 +11,13 @@ public class MaterialBase : MonoBehaviour
             6 => 5,
             4 => 2,
             _ => 1
-        };        
+        };
+        MaterialAdd add = new();
         add.AddMaterialBuilding(material);
     }
-    public void MaterialDelHouse() => del.SubtractMaterialBuilding(50);
+    public void MaterialDelHouse() {
+        MaterialDel del = new();
+        del.SubtractMaterialBuilding(50); 
+    }
+
 }

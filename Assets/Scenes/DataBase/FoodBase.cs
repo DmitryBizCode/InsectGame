@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FoodBase : MonoBehaviour
+public class FoodBase
 {
-    readonly MaterialAdd add;
-    readonly MaterialDel del;
 
     public void FoodAdd(InsectBody a)
     {
@@ -14,10 +12,23 @@ public class FoodBase : MonoBehaviour
             6 => 200,
             4 => 120,
             _ => 80
-        };
+        };        
+        MaterialAdd add = new();
         add.AddFood(food);
     }
-    public void FoodDelChild() => del.SubtractFood(1);
-    public void FoodDel() => del.SubtractFood(1);
-    public void FoodDelWithoutWater() => del.SubtractFood(6);
+    public void FoodDelChild()
+    {
+        MaterialDel del = new();
+        del.SubtractFood(4);
+    }
+    public void FoodDel()
+    {
+        MaterialDel del = new();
+        del.SubtractFood(1);
+    }
+    public void FoodDelWithoutWater()
+    {
+        MaterialDel del = new();
+        del.SubtractFood(6);
+    }
 }

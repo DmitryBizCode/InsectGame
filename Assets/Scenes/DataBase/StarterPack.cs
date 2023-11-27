@@ -12,7 +12,7 @@ public class StarterPack : MonoBehaviour
 
     private void Awake()
     {
-        elp myElpInstance = new elp(this.Material, this.Food, this.Water); // Example values for Material, Food, Water
+        Helper myElpInstance = new (this.Material, this.Food, this.Water); // Example values for Material, Food, Water
         // Save the updated data to JSON file
         myElpInstance.EnsureValuesSet();
         myElpInstance.SaveMaterialData();

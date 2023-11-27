@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterBase : MonoBehaviour
+public class WaterBase
 {
-    readonly MaterialAdd add;
-    readonly MaterialDel del;
-
     public void WaterAdd(InsectBody a)
     {
         int water = a.Health switch
@@ -15,9 +12,22 @@ public class WaterBase : MonoBehaviour
             4 => 80,
             _ => 60
         };
+        MaterialAdd add = new();
         add.AddWater(water);
     }
-    public void WaterDelChild() => del.SubtractWater(5);
-    public void WaterDel() => del.SubtractWater(1);
-    public void WaterDelWithoutFood() => del.SubtractWater(3);
+    public void WaterDelChild()
+    {
+        MaterialDel del = new(); 
+        del.SubtractWater(5); 
+    }
+    public void WaterDel()
+    {
+        MaterialDel del = new();
+        del.SubtractWater(1);
+    }
+    public void WaterDelWithoutFood()
+    {
+        MaterialDel del = new();
+        del.SubtractWater(3);
+    }
 }

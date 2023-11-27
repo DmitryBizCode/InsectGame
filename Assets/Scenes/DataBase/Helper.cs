@@ -5,18 +5,18 @@ using System.IO;
 using System.Xml.Serialization;
 using UnityEngine;
 
-public class elp : MaterialData
+public class Helper : MaterialData
 {
     private readonly string filePath = "DataBaseMFW2.txt";
 
-    public elp(int material, int food, int water)
+    public Helper(int material, int food, int water)
     {
         MaterialBuilding = material;
         Food = food;
         Water = water;
     }
 
-    public elp()
+    public Helper()
     {
         // Default constructor without parameters
     }
@@ -36,8 +36,8 @@ public class elp : MaterialData
         
         try
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(MaterialData));
-            FileStream fstream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None);
+            var serializer = new XmlSerializer(typeof(MaterialData));
+            var fstream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None);
             serializer.Serialize(fstream, this);
             fstream.Close();
         }
@@ -50,8 +50,8 @@ public class elp : MaterialData
     {
         try
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(MaterialData));
-            FileStream fstream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.None);
+            var serializer = new XmlSerializer(typeof(MaterialData));
+            var fstream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.None);
             MaterialData materialData = serializer.Deserialize(fstream) as MaterialData;
             fstream.Close();
 
