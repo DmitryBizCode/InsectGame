@@ -6,6 +6,9 @@ public class InsectEnemy : MonoBehaviour
 {
     [SerializeField] private GameObject enemy_Insect;
     [SerializeField] private GameObject Egg;
+    [SerializeField] private GameObject Material_object;
+    [SerializeField] private GameObject Food_object;
+
 
     [SerializeField] private int start_spawn_count;
     [SerializeField] private int maximum_spawn_ins;
@@ -39,7 +42,7 @@ public class InsectEnemy : MonoBehaviour
     }
     private void SpawnFirst()
     {
-        for (int i = 0; i < 1; i++)
+        for (int i = 0; i < 22; i++)
         {
             GameObject newEnemy  = Instantiate(enemy_Insect, transform.position, Quaternion.identity);
             newEnemy.name = "Enemy_" + n.ToString(); // Присвоюємо унікальне ім'я кожному об'єкту

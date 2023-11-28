@@ -9,7 +9,7 @@ public class House : MonoBehaviour
     [SerializeField] private GameObject HouseObg;
     private float timer = 0f; //timer
     private readonly float delay = 1f; //limit timer
-    private readonly List<GameObject> list = new List<GameObject>();
+    private readonly List<GameObject> list = new ();
 
     // Update is called once per frame
     void Update()

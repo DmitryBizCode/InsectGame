@@ -29,6 +29,6 @@ public class FoodBase
     public void FoodDelWithoutWater()
     {
         MaterialDel del = new();
-        del.SubtractFood(6);
+        del.SubtractFood(4);
     }
 }

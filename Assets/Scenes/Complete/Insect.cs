@@ -10,9 +10,6 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class Insect : MonoBehaviour
 {
-
-    [SerializeField] private GameObject InsectGraphics;
-
     private ChangePosition posit;
     public InsectBody ins;
 
@@ -33,6 +30,7 @@ public class Insect : MonoBehaviour
         timer += Time.deltaTime; // додаємо час, що пройшов з останнього кадру        
         if (timer >= delay)
         {
+            posit.DetectedFMW();
             posit.ChangePositions();
             Eating();
             transform.position = new Vector3(ins.XY.Item1, ins.XY.Item2, 0);

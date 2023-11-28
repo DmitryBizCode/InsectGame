@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class EggInsect : MonoBehaviour
 {
-    private readonly int Timer;
-
     public EggLive egg ;
     private float timer = 0f; //timer
     readonly float delay = 3f; //limit timer
     // Start is called before the first frame update
     void Start()
     {
-        egg = new EggLive(Timer);
+        egg = new EggLive(0);
         (int,int) house = CoordinateHouse.GetRandomCoordinate();
         if (house.Item1 == 0 && house.Item2 == 0)
             house = (1, -1);        
-        transform.position = new Vector3(house.Item1, house.Item2 + 1,0);
+        transform.position = new Vector3(house.Item1, house.Item2 + 1.3f ,0);
     }
 
     // Update is called once per frame
