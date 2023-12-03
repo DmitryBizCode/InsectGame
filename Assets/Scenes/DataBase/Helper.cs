@@ -32,8 +32,7 @@ public class Helper : MaterialData
     }
 
     public void SaveMaterialData()
-    {
-        
+    {        
         try
         {
             var serializer = new XmlSerializer(typeof(MaterialData));

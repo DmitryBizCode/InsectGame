@@ -6,9 +6,7 @@ public class InsectEnemy : MonoBehaviour
 {
     [SerializeField] private GameObject enemy_Insect;
     [SerializeField] private GameObject Egg;
-    [SerializeField] private GameObject Material_object;
-    [SerializeField] private GameObject Food_object;
-
+    [SerializeField] private GameObject Mobs;
 
     [SerializeField] private int start_spawn_count;
     [SerializeField] private int maximum_spawn_ins;
@@ -21,6 +19,8 @@ public class InsectEnemy : MonoBehaviour
     private int n = 0;
     private int egg_count = 0;
     private int qwerty = 0;
+    private int mobs_count = 0;
+    private int l = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +34,7 @@ public class InsectEnemy : MonoBehaviour
 
         if (timer >= delay)
         {
+            SpawnMobs();
             GrowUpInsect();
             SpawnEgg();
             TTL++;
@@ -51,7 +52,7 @@ public class InsectEnemy : MonoBehaviour
         }       
     }
     private void SpawnEgg() {
-        if ((n + qwerty) <= maximum_spawn_ins && TTL > 2 && qwerty < (int)((n / 2) + 1))
+        if ((n + qwerty) <= maximum_spawn_ins - mobs_count && TTL > 2 && qwerty < (int)((n / 2) + 1))
         {
             MaterialDel del = new();
             if (del.GetWaterValue() > (lis.Count * 15 + 5) && del.GetFoodValue() > (lis.Count * 15 + 4))
@@ -74,6 +75,8 @@ public class InsectEnemy : MonoBehaviour
                     var pos = enemy.transform.position;
                     if (pos == new Vector3(0f, 100f, 0f))
                     {
+                        if (enemy.name.StartsWith("Mobs"))
+                            mobs_count--;
                         Destroy(enemy);
                         lis.Remove(enemy);
                         i = 0;
@@ -94,4 +97,71 @@ public class InsectEnemy : MonoBehaviour
                         }
                 }
     }
+    public void SpawnMobs()
+    {
+        float res = (float)((lis.Count - (mobs_count * 5)) / 25f);
+        if (FW() + res > 1f)
+        {
+            GameObject newEnemy = Instantiate(Mobs, transform.position, Quaternion.identity);
+            newEnemy.name = "Mobs" + l.ToString(); // Присвоюємо унікальне ім'я кожному мобу
+            lis.Add(newEnemy);
+            mobs_count++;
+        }
+    }
+    public float FW()
+    {
+        MaterialDel del = new();
+        System.Random rand = new();
+        int randomIndex = rand.Next(0, 16);
+        int randomIndex2 = rand.Next(0, 16);
+        float cef = 0;
+        if (del.GetWaterValue() > 1500)
+            if (randomIndex > 5)
+                cef = 1;
+        else if (del.GetWaterValue() < 1500)        
+            if (randomIndex < 5)
+                cef = 1;
+        if (del.GetFoodValue() > 1500)
+            if (randomIndex2 > 5)
+                cef *= 1;
+        else if (del.GetFoodValue() < 1500)
+            if (randomIndex2 < 5)
+                cef *= 1;
+        else 
+             cef = 0;
+        cef *= 0.3f;
+        return cef;
+    }
+    /*private void LookingFight()
+    {
+        if (lis.Count > 0)
+            for (int i = 0; i < 1; i++)
+                foreach (GameObject mobsik in lis)
+                {
+                    if(mobsik.name.StartsWith("Mobs"))
+                        foreach (GameObject enemy in lis)
+                        {
+                            if (mobsik.name.StartsWith("Enemy_"))
+                            {
+
+                            }
+                            // Робимо щось з кожним об'єктом
+                            var pos = enemy.transform.position;
+                            if (pos == new Vector3(0f, 100f, 0f))
+                            {
+
+                                i = 0;
+                                break;
+                            }
+                        }
+                    // Робимо щось з кожним об'єктом
+                    var pos = enemy.transform.position;
+                    if (pos == new Vector3(0f, 100f, 0f))
+                    {
+                        
+                        i = 0;
+                        break;
+                    }                   
+                }
+    }*/
 }

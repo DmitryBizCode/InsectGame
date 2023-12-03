@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 199561663870273796}
   - component: {fileID: 7050286514743718862}
-  - component: {fileID: 686056515607390937}
+  - component: {fileID: -7716462970298764296}
   m_Layer: 0
   m_Name: Jelly 7
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &686056515607390937
+--- !u!114 &-7716462970298764296
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,7 +94,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6188551624344393034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 574fc6a64a6489a41a753f1933dac4cf, type: 3}
+  m_Script: {fileID: 11500000, guid: 005b12d5f19a5e249af3b5c4ea4001d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InsectGraphics: {fileID: 0}
