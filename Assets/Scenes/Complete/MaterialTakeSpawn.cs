@@ -7,6 +7,8 @@ public class MaterialTakeSpawn : MonoBehaviour
     [SerializeField] private GameObject[] texture;
     [SerializeField] private int MaterialCount;
 
+
+
     readonly List<GameObject> lis = new();
     // Start is called before the first frame update
     private void Awake()

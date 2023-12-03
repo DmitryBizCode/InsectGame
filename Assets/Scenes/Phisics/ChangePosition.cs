@@ -35,18 +35,15 @@ public class ChangePosition
         (int, int) itemsToRemoveMaterial = (-100, -100);
 
 
-        foreach ((int x, int y) in wat.waterList)
-        {
+        foreach ((int x, int y) in wat.waterList)        
             if (insec.XY == (x, y))
             {
                 water.WaterAdd(insec);
                 insec.XY = (0, 0);
                 break;
-            }
-        }
+            }       
 
-        foreach ((int x, int y) in CoordinateFoodMaterial.StaticFoodCoordinate)
-        {
+        foreach ((int x, int y) in CoordinateFoodMaterial.StaticFoodCoordinate)        
             if (insec.XY == (x, y))
             {
                 food.FoodAdd(insec);
@@ -54,12 +51,11 @@ public class ChangePosition
                 insec.XY = (0, 0);
                 break;
             }
-        }
+        
         if (itemsToRemoveFood != (-100,-100))       
             CoordinateFoodMaterial.StaticFoodCoordinate.Remove(itemsToRemoveFood);
         
-        foreach ((int x, int y) in CoordinateFoodMaterial.StaticMaterailCoordinate)
-        {
+        foreach ((int x, int y) in CoordinateFoodMaterial.StaticMaterailCoordinate)        
             if (insec.XY == (x, y))
             {
                 material.MaterialAdd(insec);
@@ -67,7 +63,7 @@ public class ChangePosition
                 insec.XY = (0, 0);
                 break;
             }
-        }
+        
         if (itemsToRemoveFood == (-100, -100))
             CoordinateFoodMaterial.StaticMaterailCoordinate.Remove(itemsToRemoveMaterial);
     }

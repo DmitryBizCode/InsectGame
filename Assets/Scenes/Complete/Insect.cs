@@ -30,6 +30,12 @@ public class Insect : MonoBehaviour
         timer += Time.deltaTime; // додаємо час, що пройшов з останнього кадру        
         if (timer >= delay)
         {
+            if (new Vector3(ins.XY.Item1, ins.XY.Item2, 0) != transform.position)
+            {
+                ins.MinusHealth2Leg();
+                if (ins.Live != "yes")
+                    ins.XY = (0, 100);
+            }
             posit.DetectedFMW();
             posit.ChangePositions();
             Eating();

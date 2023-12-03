@@ -11,6 +11,7 @@ public class InsectEnemy : MonoBehaviour
     [SerializeField] private int start_spawn_count;
     [SerializeField] private int maximum_spawn_ins;
 
+    readonly float radius = 1.5f; // Радіус для перевірки мобів і інсектів
 
     readonly List<GameObject> lis = new ();
     private float timer = 0f;
@@ -22,11 +23,8 @@ public class InsectEnemy : MonoBehaviour
     private int mobs_count = 0;
     private int l = 0;
     // Start is called before the first frame update
-    void Start()
-    {
-        n = start_spawn_count;
-        SpawnFirst();
-    }
+    void Start() => SpawnFirst();
+    
     // Update is called once per frame
     void Update()
     {
@@ -34,6 +32,7 @@ public class InsectEnemy : MonoBehaviour
 
         if (timer >= delay)
         {
+            LookingFight();
             SpawnMobs();
             GrowUpInsect();
             SpawnEgg();
@@ -43,7 +42,7 @@ public class InsectEnemy : MonoBehaviour
     }
     private void SpawnFirst()
     {
-        for (int i = 0; i < 22; i++)
+        for (int i = 0; i < start_spawn_count; i++)
         {
             GameObject newEnemy  = Instantiate(enemy_Insect, transform.position, Quaternion.identity);
             newEnemy.name = "Enemy_" + n.ToString(); // Присвоюємо унікальне ім'я кожному об'єкту
@@ -55,7 +54,7 @@ public class InsectEnemy : MonoBehaviour
         if ((n + qwerty) <= maximum_spawn_ins - mobs_count && TTL > 2 && qwerty < (int)((n / 2) + 1))
         {
             MaterialDel del = new();
-            if (del.GetWaterValue() > (lis.Count * 15 + 5) && del.GetFoodValue() > (lis.Count * 15 + 4))
+            if (del.GetWaterValue() > (lis.Count * 20 + 5) && del.GetFoodValue() > (lis.Count * 20 + 4))
             {
                 GameObject newEnemy = Instantiate(Egg, transform.position, Quaternion.identity);
                 newEnemy.name = "Egg" + egg_count.ToString(); // Присвоюємо унікальне ім'я кожному яйцю
@@ -99,13 +98,14 @@ public class InsectEnemy : MonoBehaviour
     }
     public void SpawnMobs()
     {
-        float res = (float)((lis.Count - (mobs_count * 5)) / 25f);
+        float res = (float)((lis.Count - (mobs_count * 5)) / 20f);
         if (FW() + res > 1f)
         {
             GameObject newEnemy = Instantiate(Mobs, transform.position, Quaternion.identity);
             newEnemy.name = "Mobs" + l.ToString(); // Присвоюємо унікальне ім'я кожному мобу
             lis.Add(newEnemy);
             mobs_count++;
+            l++;
         }
     }
     public float FW()
@@ -118,7 +118,7 @@ public class InsectEnemy : MonoBehaviour
         if (del.GetWaterValue() > 1500)
             if (randomIndex > 5)
                 cef = 1;
-        else if (del.GetWaterValue() < 1500)        
+        else if (del.GetWaterValue() < 1500)
             if (randomIndex < 5)
                 cef = 1;
         if (del.GetFoodValue() > 1500)
@@ -132,36 +132,24 @@ public class InsectEnemy : MonoBehaviour
         cef *= 0.3f;
         return cef;
     }
-    /*private void LookingFight()
+    private void LookingFight()
     {
         if (lis.Count > 0)
-            for (int i = 0; i < 1; i++)
-                foreach (GameObject mobsik in lis)
-                {
-                    if(mobsik.name.StartsWith("Mobs"))
-                        foreach (GameObject enemy in lis)
+            foreach (GameObject mobsik in lis)                
+                if(mobsik.name.StartsWith("Mobs"))
+                    foreach (GameObject enemy in lis)                        
+                        if (enemy.name.StartsWith("Ene"))
                         {
-                            if (mobsik.name.StartsWith("Enemy_"))
+                            // Перевірка, чи відстань менша за заданий радіус
+                            float distance = Vector3.Distance(mobsik.transform.position, enemy.transform.position);
+                            if ((distance <= radius))
                             {
-
+                                enemy.transform.position = new Vector3(enemy.transform.position.x + 1, enemy.transform.position.y, 0f);
+                                mobsik.transform.position = new Vector3(mobsik.transform.position.x + 1, mobsik.transform.position.y, 0f);
+                                if (mobsik.transform.position == enemy.transform.position)                                    
+                                    mobsik.transform.position = new Vector3(0f,100f, 0f);                                    
                             }
-                            // Робимо щось з кожним об'єктом
-                            var pos = enemy.transform.position;
-                            if (pos == new Vector3(0f, 100f, 0f))
-                            {
-
-                                i = 0;
-                                break;
-                            }
-                        }
-                    // Робимо щось з кожним об'єктом
-                    var pos = enemy.transform.position;
-                    if (pos == new Vector3(0f, 100f, 0f))
-                    {
-                        
-                        i = 0;
-                        break;
-                    }                   
-                }
-    }*/
+                        }                                             
+                
+    }
 }

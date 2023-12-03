@@ -15,8 +15,8 @@ public class MobsFight : MonoBehaviour
     void Start()
     {
         var rand = new System.Random();
-        int randomNumberX = rand.Next(-20, 30);
-        int randomNumberY = rand.Next(-17, 17);
+        int randomNumberX = rand.Next(-18, 27);
+        int randomNumberY = rand.Next(-17, 14);
         ins = new InsectBody(2, "yes", randomNumberX, randomNumberY);
         posit = new ChangePosition(ins);
         transform.position = new Vector3(randomNumberX, randomNumberY, 0);
@@ -25,23 +25,20 @@ public class MobsFight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Death();
+
         timer += Time.deltaTime; // додаємо час, що пройшов з останнього кадру        
         if (timer >= delay)
         {
+            if ( == transform.position)
+            {
+                ins.MinusHealth2Leg();
+                if (ins.Live != "yes")
+                    ins.XY = (0, 100);
+            }
             posit.ChangePositions();
             transform.position = new Vector3(ins.XY.Item1, ins.XY.Item2, 0);
-            
+
             timer = 0f; // скидаємо таймер для нової затримки
         }
-    }
-    private void Death()
-    {
-        if (transform.position == new Vector3(0f, 100f, 0f))
-        {
-            ins.MinusHealth2Leg();
-            if (ins.Live != "yes")
-                ins.XY = (0, 100);
-        }      
     }
 }

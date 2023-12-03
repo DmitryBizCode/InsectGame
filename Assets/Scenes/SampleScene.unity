@@ -35574,74 +35574,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &983662933
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 199561663870273796, guid: c43a83f48f28b6c48b5f393948122c55,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.9298432
-      objectReference: {fileID: 0}
-    - target: {fileID: 199561663870273796, guid: c43a83f48f28b6c48b5f393948122c55,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.550399
-      objectReference: {fileID: 0}
-    - target: {fileID: 199561663870273796, guid: c43a83f48f28b6c48b5f393948122c55,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 199561663870273796, guid: c43a83f48f28b6c48b5f393948122c55,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 199561663870273796, guid: c43a83f48f28b6c48b5f393948122c55,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 199561663870273796, guid: c43a83f48f28b6c48b5f393948122c55,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 199561663870273796, guid: c43a83f48f28b6c48b5f393948122c55,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 199561663870273796, guid: c43a83f48f28b6c48b5f393948122c55,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 199561663870273796, guid: c43a83f48f28b6c48b5f393948122c55,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 199561663870273796, guid: c43a83f48f28b6c48b5f393948122c55,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6188551624344393034, guid: c43a83f48f28b6c48b5f393948122c55,
-        type: 3}
-      propertyPath: m_Name
-      value: Jelly 7
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c43a83f48f28b6c48b5f393948122c55, type: 3}
 --- !u!1 &1056830084
 GameObject:
   m_ObjectHideFlags: 0
@@ -36026,8 +35958,8 @@ MonoBehaviour:
     type: 3}
   Egg: {fileID: 2041814461229269805, guid: 2243e0a2d2608ab45a2a1dc8909890c4, type: 3}
   Mobs: {fileID: 6188551624344393034, guid: c43a83f48f28b6c48b5f393948122c55, type: 3}
-  start_spawn_count: 0
-  maximum_spawn_ins: 26
+  start_spawn_count: 30
+  maximum_spawn_ins: 60
 --- !u!1 &1321591054
 GameObject:
   m_ObjectHideFlags: 0
@@ -36581,4 +36513,3 @@ SceneRoots:
   - {fileID: 1478279999}
   - {fileID: 353224491}
   - {fileID: 334310381}
-  - {fileID: 983662933}
