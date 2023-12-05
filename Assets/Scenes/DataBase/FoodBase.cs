@@ -9,9 +9,9 @@ public class FoodBase
     {
         int food = a.Health switch
         {
-            6 => 200,
-            4 => 120,
-            _ => 80
+            6 => 250,
+            4 => 150,
+            _ => 100
         };        
         MaterialAdd add = new();
         add.AddFood(food);

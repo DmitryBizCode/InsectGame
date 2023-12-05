@@ -29,7 +29,7 @@ public class MobsFight : MonoBehaviour
         timer += Time.deltaTime; // додаємо час, що пройшов з останнього кадру        
         if (timer >= delay)
         {
-            if ( == transform.position)
+            if (new Vector3(0f, 100f, 0f) == transform.position)
             {
                 ins.MinusHealth2Leg();
                 if (ins.Live != "yes")

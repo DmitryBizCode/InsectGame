@@ -8,9 +8,9 @@ public class WaterBase
     {
         int water = a.Health switch
         {
-            6 => 100,
-            4 => 80,
-            _ => 60
+            6 => 150,
+            4 => 100,
+            _ => 70
         };
         MaterialAdd add = new();
         add.AddWater(water);

@@ -5,6 +5,7 @@ using UnityEngine;
 public class InsectEnemy : MonoBehaviour
 {
     [SerializeField] private GameObject enemy_Insect;
+    [SerializeField] private GameObject clevermobs;
     [SerializeField] private GameObject Egg;
     [SerializeField] private GameObject Mobs;
 
@@ -21,6 +22,9 @@ public class InsectEnemy : MonoBehaviour
     private int egg_count = 0;
     private int qwerty = 0;
     private int mobs_count = 0;
+    private int clever_count = 20;
+    private int ttlegg = 0;
+
     private int l = 0;
     // Start is called before the first frame update
     void Start() => SpawnFirst();
@@ -35,8 +39,12 @@ public class InsectEnemy : MonoBehaviour
             LookingFight();
             SpawnMobs();
             GrowUpInsect();
-            SpawnEgg();
+            if (ttlegg % 3 == 0)
+            {
+                SpawnEgg();
+            }            
             TTL++;
+            ttlegg++;
             timer = 0f; // скидаємо таймер для нової затримки
         }
     }
@@ -44,8 +52,8 @@ public class InsectEnemy : MonoBehaviour
     {
         for (int i = 0; i < start_spawn_count; i++)
         {
-            GameObject newEnemy  = Instantiate(enemy_Insect, transform.position, Quaternion.identity);
-            newEnemy.name = "Enemy_" + n.ToString(); // Присвоюємо унікальне ім'я кожному об'єкту
+            GameObject newEnemy  = Instantiate(clevermobs, transform.position, Quaternion.identity);
+            newEnemy.name = "Enemy_CLEVER_" + n.ToString(); // Присвоюємо унікальне ім'я кожному об'єкту
             lis.Add(newEnemy);
             n++;
         }       
@@ -76,6 +84,8 @@ public class InsectEnemy : MonoBehaviour
                     {
                         if (enemy.name.StartsWith("Mobs"))
                             mobs_count--;
+                        if (enemy.name.StartsWith("Enemy_CLEVER_"))
+                            clever_count--;
                         Destroy(enemy);
                         lis.Remove(enemy);
                         i = 0;
@@ -86,8 +96,19 @@ public class InsectEnemy : MonoBehaviour
                         {
                             Destroy(enemy);
                             lis.Remove(enemy);
-                            GameObject newEnemy = Instantiate(enemy_Insect, transform.position, Quaternion.identity);
-                            newEnemy.name = "Enemy_" + n.ToString(); // Присвоюємо унікальне ім'я кожному об'єкту
+                            GameObject newEnemy;
+                            MaterialDel info = new();
+                            if ((info.GetFoodValue() + info.GetWaterValue()) < (lis.Count * 100 / (clever_count-19)))
+                            {
+                                newEnemy = Instantiate(clevermobs, transform.position, Quaternion.identity);
+                                newEnemy.name = "Enemy_CLEVER_" + n.ToString(); // Присвоюємо унікальне ім'я кожному об'єкту
+                                clever_count++;
+                            }
+                            else
+                            {
+                                newEnemy = Instantiate(enemy_Insect, transform.position, Quaternion.identity);
+                                newEnemy.name = "Enemy_" + n.ToString(); // Присвоюємо унікальне ім'я кожному об'єкту
+                            }
                             n++;
                             qwerty--;
                             lis.Add(newEnemy);
@@ -98,7 +119,7 @@ public class InsectEnemy : MonoBehaviour
     }
     public void SpawnMobs()
     {
-        float res = (float)((lis.Count - (mobs_count * 5)) / 20f);
+        float res = (float)((lis.Count - (mobs_count * 5)) / 25f);
         if (FW() + res > 1f)
         {
             GameObject newEnemy = Instantiate(Mobs, transform.position, Quaternion.identity);

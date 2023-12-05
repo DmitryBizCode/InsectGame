@@ -26,8 +26,8 @@ public class Helper : MaterialData
         if (MaterialBuilding == 0 || Food == 0 || Water == 0)
         {
             MaterialBuilding = 50;
-            Food = 3000;
-            Water = 3000;
+            Food = 2000;
+            Water = 2000;
         }
     }
 
