@@ -24,7 +24,6 @@ public class InsectEnemy : MonoBehaviour
     private int mobs_count = 0;
     private int clever_count = 20;
     private int ttlegg = 0;
-
     private int l = 0;
     // Start is called before the first frame update
     void Start() => SpawnFirst();
@@ -59,7 +58,11 @@ public class InsectEnemy : MonoBehaviour
         }       
     }
     private void SpawnEgg() {
-        if ((n + qwerty) <= maximum_spawn_ins - mobs_count && TTL > 2 && qwerty < (int)((n / 2) + 1))
+        int count = 0;
+        foreach (var enemy in lis)
+            if (enemy.name.StartsWith("En"))
+                count++;
+        if ((count + qwerty) <= maximum_spawn_ins - mobs_count && TTL > 2 && qwerty < (int)((n / 2) + 1))
         {
             MaterialDel del = new();
             if (del.GetWaterValue() > (lis.Count * 20 + 5) && del.GetFoodValue() > (lis.Count * 20 + 4))
@@ -98,7 +101,7 @@ public class InsectEnemy : MonoBehaviour
                             lis.Remove(enemy);
                             GameObject newEnemy;
                             MaterialDel info = new();
-                            if ((info.GetFoodValue() + info.GetWaterValue()) < (lis.Count * 100 / (clever_count-19)))
+                            if ((info.GetFoodValue() + info.GetWaterValue()) < (lis.Count * 100 * 21 / clever_count+1))
                             {
                                 newEnemy = Instantiate(clevermobs, transform.position, Quaternion.identity);
                                 newEnemy.name = "Enemy_CLEVER_" + n.ToString(); // Присвоюємо унікальне ім'я кожному об'єкту
