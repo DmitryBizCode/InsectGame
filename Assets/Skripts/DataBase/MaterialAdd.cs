@@ -4,7 +4,7 @@ using UnityEngine;
 using System.IO;
 using System.Xml.Serialization;
 
-public class MaterialAdd
+public class MaterialAdd : IAddRes
 {
     // Метод для додавання кількості Food до XML-файлу
     public void AddFood(int amount)

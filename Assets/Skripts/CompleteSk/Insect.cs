@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEditor;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.XR;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class Insect : MonoBehaviour
 {

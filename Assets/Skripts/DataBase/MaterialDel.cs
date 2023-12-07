@@ -7,7 +7,7 @@ using UnityEngine;
 using System.IO;
 using System.Xml.Serialization;
 
-public class MaterialDel
+public class MaterialDel : IResursesD
 {
     public void SubtractFood(int amount)
     {

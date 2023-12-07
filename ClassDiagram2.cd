@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CoordinateFoodMaterial">
+    <Position X="17.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scenes\Building\CoordinateFoodMaterial.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoordinateHouse">
+    <Position X="16" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scenes\Building\CoordinateHouse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Water">
+    <Position X="14.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scenes\Building\Water.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CleverInsect">
+    <Position X="6.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIABAACAAAAAAAAAAAAgAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Assets\Scenes\Complete\CleverInsect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EggInsect">
+    <Position X="6.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAABAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scenes\Complete\EggInsect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="House">
+    <Position X="10.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAgAAAAAAAAAQAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scenes\Complete\House.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoodTexture">
+    <Position X="9" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAABAgAAAAAAAAAAAAAAAAAgAAAAgAAAAAAEA=</HashCode>
+      <FileName>Assets\Scenes\Complete\FoodTexture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsectEnemy">
+    <Position X="10.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwQAAAAACGAgICAAGEQAAAgCIDAIAAAAFAAAABAACAQ=</HashCode>
+      <FileName>Assets\Scenes\Complete\InsectEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Insect">
+    <Position X="6.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIABAACAAAAAAAAAAAAgAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Assets\Scenes\Complete\Insect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaterialTakeSpawn">
+    <Position X="3.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAABAgAAAAAAAAQAAAAAAAAgAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scenes\Complete\MaterialTakeSpawn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MobsFight">
+    <Position X="8.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIABAACAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scenes\Complete\MobsFight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoodBase">
+    <Position X="1.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAIAAAAAAAAAAAAAAAAAABAQ=</HashCode>
+      <FileName>Assets\Scenes\DataBase\FoodBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Helper">
+    <Position X="1.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACCAAAAAAAAIAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scenes\DataBase\Helper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaterialAdd">
+    <Position X="3.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Assets\Scenes\DataBase\MaterialAdd.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MaterialBase">
+    <Position X="1.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scenes\DataBase\MaterialBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaterialData">
+    <Position X="1.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAgAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Assets\Scenes\DataBase\MaterialData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaterialDel">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAIgAAAAAAAAAAAAAIADA=</HashCode>
+      <FileName>Assets\Scenes\DataBase\MaterialDel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="StarterPack">
+    <Position X="3.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAgAAAEA=</HashCode>
+      <FileName>Assets\Scenes\DataBase\StarterPack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WaterBase">
+    <Position X="1.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAgACA=</HashCode>
+      <FileName>Assets\Scenes\DataBase\WaterBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChangeClever">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAABACAAAAAAgAAEAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scenes\Phisics\ChangeClever.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChangePosition">
+    <Position X="16" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAgAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scenes\Phisics\ChangePosition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EggLive">
+    <Position X="8.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAABAQA=</HashCode>
+      <FileName>Assets\Scenes\Phisics\EggLive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsectBody">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAIAAAAAAAAAAAAAAgAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Assets\Scenes\Phisics\InsectBody.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="IAddRes">
+    <Position X="16" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Assets\Scenes\Phisics\IAddRes.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IInsect_Helth">
+    <Position X="17.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scenes\Phisics\IInsect_Helth.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IResursesD">
+    <Position X="14.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAIgAAAAAAAAAAAAAIABA=</HashCode>
+      <FileName>Assets\Scenes\Phisics\IResurses.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

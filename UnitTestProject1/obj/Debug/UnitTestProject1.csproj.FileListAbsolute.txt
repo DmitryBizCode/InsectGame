@@ -1,0 +1,2 @@
+C:\Kyrsova\InsectGame\UnitTestProject1\obj\Debug\UnitTestProject1.csproj.AssemblyReference.cache
+C:\Kyrsova\InsectGame\UnitTestProject1\obj\Debug\UnitTestProject1.csproj.CoreCompileInputs.cache

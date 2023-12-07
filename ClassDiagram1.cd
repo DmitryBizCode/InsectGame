@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CleverInsect">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIABAACAAAAAAAAAAAAgAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Assets\Scenes\Complete\CleverInsect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EggInsect">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAABAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scenes\Complete\EggInsect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoodTexture">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAABAgAAAAAAAAAAAAAAAAAgAAAAgAAAAAAEA=</HashCode>
+      <FileName>Assets\Scenes\Complete\FoodTexture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="House">
+    <Position X="6" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAgAAAAAAAAAQAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scenes\Complete\House.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Insect">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIABAACAAAAAAAAAAAAgAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Assets\Scenes\Complete\Insect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsectEnemy">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwQAAAAACGAgICAAGEQAAAgCIDAIAAAAFAAAABAACAQ=</HashCode>
+      <FileName>Assets\Scenes\Complete\InsectEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaterialTakeSpawn">
+    <Position X="9.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAABAgAAAAAAAAQAAAAAAAAgAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scenes\Complete\MaterialTakeSpawn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MobsFight">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIABAACAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scenes\Complete\MobsFight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Helper">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACCAAAAAAAAIAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scenes\DataBase\Helper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChangeClever">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAABACAAAAAAgAAEAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scenes\Phisics\ChangeClever.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChangePosition">
+    <Position X="0.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAgAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scenes\Phisics\ChangePosition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EggLive">
+    <Position X="2.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAABAQA=</HashCode>
+      <FileName>Assets\Scenes\Phisics\EggLive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsectBody">
+    <Position X="4.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAIAAAAAAAAAAAAAAgAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Assets\Scenes\Phisics\InsectBody.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

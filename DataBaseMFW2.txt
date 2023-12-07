@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <MaterialData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Helper">
-  <MaterialBuilding>39</MaterialBuilding>
-  <Food>2</Food>
-  <Water>0</Water>
+  <MaterialBuilding>0</MaterialBuilding>
+  <Food>1670</Food>
+  <Water>1670</Water>
 </MaterialData>
